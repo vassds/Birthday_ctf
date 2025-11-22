@@ -2,74 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Happy Birthday!</title>
+  <title>Happy Birthday Bestie!</title>
   <style>
+    /* Page Background & Main Font */
     body {
-      background: radial-gradient(circle at top, #66fcf1 0, #0b0c10 55%);
-      color: #f0f0f0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      text-align: center;
-      min-height: 100vh;
+      background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
+      color: #e0e0e0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      padding: 20px;
     }
-    .card {
-      background: rgba(11, 12, 16, 0.9);
-      border-radius: 16px;
-      padding: 30px 25px;
-      max-width: 520px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(102, 252, 241, 0.4);
-      animation: float 3s ease-in-out infinite;
+
+    /* Main Card Container */
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(20, 20, 30, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 0 30px rgba(102, 252, 241, 0.15);
+      border: 1px solid rgba(102, 252, 241, 0.2);
+      text-align: center;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in;
     }
+
+    /* Typography */
     h1 {
-      font-size: 2.2em;
-      margin-bottom: 5px;
+      color: #66fcf1;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
     }
+    
     h3 {
+      color: #45a29e;
+      font-weight: 300;
       margin-top: 0;
+      letter-spacing: 1px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #c5c6c7;
+      margin-bottom: 20px;
+    }
+
+    /* The Photo Collage Grid */
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 40px 0;
+    }
+
+    .photo-frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 2px solid #45a29e;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures photos fill the square without stretching */
+      display: block;
+    }
+
+    /* Hover effect for photos */
+    .photo-frame:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(102, 252, 241, 0.4);
+      z-index: 10;
+    }
+
+    /* Footer/Signature */
+    .signature {
+      margin-top: 40px;
+      font-style: italic;
       color: #66fcf1;
     }
-    p {
-      line-height: 1.6;
-      margin: 10px 0;
+
+    /* Simple Fade In Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .small {
-      font-size: 0.9em;
-      color: #c5c6c7;
-      margin-top: 15px;
-    }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0); }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .container { padding: 20px; }
+      .collage { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 <body>
-  <div class="card">
+
+  <div class="container">
     <h1>🎉 Happy Birthday! 🎉</h1>
-    <h3>You cracked the code!</h3>
+    <h3>Mission Accomplished: You found the secret.</h3>
 
     <p>
-      You solved every step of this little web puzzle and made it all the way to the end.
-      That already proves you are curious, smart, and stubborn in the best way.
+      If you are reading this, it means you cracked the code. I knew you could do it! 
+      But the real prize isn't the password—it's the memories we've made along the way.
+    </p>
+
+    <!-- THE PHOTO COLLAGE -->
+    <div class="collage">
+      <!-- Replace 'images/meme1.jpg' with your actual filenames -->
+      <div class="photo-frame"><img src="images/photo1.jpg" alt="Memory 1"></div>
+      <div class="photo-frame"><img src="images/photo2.jpg" alt="Memory 2"></div>
+      <div class="photo-frame"><img src="images/photo3.jpg" alt="Memory 3"></div>
+      <div class="photo-frame"><img src="images/photo4.jpg" alt="Memory 4"></div>
+      <div class="photo-frame"><img src="images/photo5.jpg" alt="Memory 5"></div>
+      <div class="photo-frame"><img src="images/photo6.jpg" alt="Memory 6"></div>
+    </div>
+
+    <p>
+      <strong>To my Best friend Kanji😊🔻:</strong><br>
+     Thank you for being the one who never stops talking—it's honestly my favorite noise. Please don't ever change that. But more importantly, thanks for always standing by my side through everything. I’m so lucky to have you in my corner.
     </p>
 
     <p>
-      [Replace this text with your personal message: memories, inside jokes, why this person is special to you, etc.]
+      I hope your future is as bright and amazing as you are. May this year bring you everything you’ve been working for and more. [ 😤 AH EKA NEME MAGEN POL TOKU KANNE NATUWA HRIYTA WADA TIKA KRPN 😤]
+      Keep shining. ✨ 
     </p>
 
-    <p>
-      I hope this year brings you new adventures, good surprises,
-      and many more reasons to smile.
-    </p>
-
-    <p class="small">
-      P.S. This whole challenge was handmade in HTML, CSS, and a bit of JavaScript just for you 💜
-    </p>
+    <div class="signature">
+      With love,<br>
+      SENU
+    </div>
   </div>
+
 </body>
 </html>
