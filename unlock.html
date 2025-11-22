@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unlock the Surprise</title>
+  <style>
+    body {
+      background: #0b0c10;
+      color: #c5c6c7;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      color: #66fcf1;
+      margin-bottom: 10px;
+    }
+    p {
+      max-width: 600px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+    input[type="password"] {
+      padding: 8px;
+      width: 220px;
+      border-radius: 4px;
+      border: 1px solid #45a29e;
+      background: #1f2833;
+      color: #c5c6c7;
+      margin-top: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      margin-left: 8px;
+      border-radius: 4px;
+      border: none;
+      background: #45a29e;
+      color: #0b0c10;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #66fcf1;
+    }
+    #msg {
+      margin-top: 20px;
+      min-height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Final Gate 🔐</h1>
+  <p>
+    You already have the password from the secret page.
+    Type it below to unlock your birthday surprise.
+  </p>
+
+  <input id="pwd" type="password" placeholder="Enter password">
+  <button onclick="checkPassword()">Unlock</button>
+
+  <div id="msg"></div>
+
+  <script>
+    // This must match the decoded base64 from secret.html
+    const CORRECT_PASSWORD = "cake2025!";
+
+    function checkPassword() {
+      const value = document.getElementById('pwd').value.trim();
+
+      if (value === CORRECT_PASSWORD) {
+        // Redirect to the final birthday card page
+        window.location.href = "card.html";
+      } else {
+        document.getElementById('msg').innerText = "Wrong password, try again!";
+      }
+    }
+  </script>
+</body>
+</html>
